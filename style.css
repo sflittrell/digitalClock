@@ -1,0 +1,13 @@
+header {
+    text-align: center;;
+}
+
+body {
+    background-color: bisque;
+    margin: 0 auto;
+    width: 400px;
+}
+
+label {
+    font-weight: bold;
+}

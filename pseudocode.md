@@ -4,7 +4,7 @@
     in both standard and military time.
 
    ## Objects:
-        Display: shows current time (hours, minutes, seconds, AM of PM)
+        clockDisplay: shows current time (hours, minutes, seconds, AM of PM)
         Format switch (radio button): changes the format of the time from standard to military
             stanTime = option for standard time
             milTime = option for military time
@@ -18,7 +18,7 @@
         amOrPm = SETS clock to am of pm
 
 
-## Start Program
+### Start Program
 
     FUNCTION displayTime
         time = GET the current time
@@ -28,18 +28,23 @@
         amOrPm = the displayAmOrPm function
         combinedTime = hour + minute + second + amOrPm
 
-    FUNCTION displayAmOrPm
-        IF hour is >= 12
-            then set amOrPm to PM
-            return amOrPm
-        Else
-            set amOrPm to AM
-            return amOrPm
+        FUNCTION displayAmOrPm
+             IF hour is >= 12
+                then set amOrPm to PM
+                return amOrPm
+            Else
+                set amOrPm to AM
+                return amOrPm
 
-    FUNCTION militaryTime
-        IF stanTime is selected
-            then the hour = the hour - 12
-        Else IF milTime is selected
-            then return hour
+        FUNCTION militaryTime
+            IF stanTime is selected
+                then the hour = the hour - 12
+            Else IF milTime is selected
+                then return hour
 
-    SET the interval of the displayTime function to 1000 so it runs th function every second and updates the time without having to refresh the page
+        RETURN combinedTime
+
+
+    SET the interval of the displayTime function to 1000 so it runs the function every second and updates the time without having to refresh the page
+
+### END Program
