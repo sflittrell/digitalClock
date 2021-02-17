@@ -34,6 +34,16 @@ label {
     font-family: "Major Mono Display", monospace;
 }
 
+.timeFormatSelect {
+    text-align: center;
+    font-weight: bold;
+    width: 250px;
+    font-size: 14px;
+    border: 2px solid black;
+    background-color: white;
+    margin: 0 auto;
+}
+
 .hat {
     background-image: url("madHatter.jpg");
     background-repeat: no-repeat;
