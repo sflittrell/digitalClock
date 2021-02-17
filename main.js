@@ -16,8 +16,13 @@ function displayTime() {
     }
 
     // Sets to standard time
-    if (hour > 12) {
-        hour = hour - 12;
+    if(document.getElementById('stanTime').checked) {
+        if (hour > 12) {
+            hour = hour - 12;
+    }
+    }
+    if(document.getElementById('milTime').checked) {
+        amOrPm = '';
     }
     let combinedTime = `${hour}:${minute}:${second} ${amOrPm}`;
     clock.textContent = combinedTime;
