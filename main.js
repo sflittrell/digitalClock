@@ -8,8 +8,7 @@ function displayTime() {
     let minute = time.getMinutes();
     let second = time.getSeconds();
     let amOrPm = 'AM';
-    let combinedTime = `${hour}:${minute}:${second} ${amOrPm}`;
-    clock.textContent = combinedTime;
+
 
     // Sets AM of PM
     if (hour >= 12) {
@@ -20,6 +19,8 @@ function displayTime() {
     if (hour > 12) {
         hour = hour - 12;
     }
+    let combinedTime = `${hour}:${minute}:${second} ${amOrPm}`;
+    clock.textContent = combinedTime;
 }
 displayTime();
 setInterval(displayTime, 1000);
