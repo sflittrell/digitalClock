@@ -31,10 +31,6 @@
         FUNCTION displayAmOrPm
              IF hour is >= 12
                 then set amOrPm to PM
-                return amOrPm
-            Else
-                set amOrPm to AM
-                return amOrPm
 
         FUNCTION militaryTime
             IF stanTime is selected
