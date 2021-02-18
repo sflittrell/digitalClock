@@ -24,6 +24,15 @@ function displayTime() {
     if(document.getElementById('milTime').checked) {
         amOrPm = '';
     }
+    if (hour < 10) {
+        hour = "0" + hour;
+    }
+    if (minute < 10) {
+        hour = "0" + hour;
+    }
+    if (second < 10) {
+        second = "0" + second;
+    }
     let combinedTime = `${hour}:${minute}:${second} ${amOrPm}`;
     clock.textContent = combinedTime;
 }
